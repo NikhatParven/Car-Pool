@@ -1,7 +1,11 @@
+//using CarPoolSystem.Web.Uitility;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//SD.IdentityAPIBase = builder.Configuration["ServiceUrls:IdentityAPI"];
 
 var app = builder.Build();
 
