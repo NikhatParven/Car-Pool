@@ -7,7 +7,7 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <!DOCTYPE html>
-<html>
+<html class="html">
 <head>
 	<title>Login Page</title>
 	<!--Made with love by Mutiullah Samim -->
@@ -23,7 +23,7 @@
 
 
 
-<body>
+<body class="html">
 	<form method="post">
 	<div class="container" >
 		<div class="d-flex justify-content-center h-100">
@@ -54,6 +54,9 @@
 						<div class="row align-items-center remember">
 							<input type="checkbox">Remember Me
 						</div>
+
+							<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
 						
 						<div class="form-group">
 							<button type="submit" class="btn float-right login_btn" value="Submit">Login</button>
