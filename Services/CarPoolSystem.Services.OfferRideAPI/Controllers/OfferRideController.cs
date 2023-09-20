@@ -1,5 +1,6 @@
 ﻿using CarPoolSystem.Services.OfferRideAPI.Model.OfferDTO;
 using CarPoolSystem.Services.OfferRideAPI.Services;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.RegularExpressions;
 
@@ -18,19 +19,9 @@ public class OfferRideController:ControllerBase
         _service = service;
     }
 
-    [HttpGet]
-    public IActionResult Get()
-    {
-        // Delegate to the service layer for data retrieval and processing
-        var dtoData = _service.GetSomeData();
 
-        return Ok(dtoData); // Return DTO data as a JSON response
-    }
-
-
-
-
-    [HttpPost]
+   
+    [HttpPost("Offer")]
     public IActionResult CreateRide([FromBody] OfferDTO offerDTO)
     {
         if (offerDTO == null)
@@ -48,7 +39,8 @@ public class OfferRideController:ControllerBase
         }
 
         // Return a 201 Created response with the created data.
-        return CreatedAtAction(nameof(Get), new { id = result.Offer_Id }, result);
+        /*  return CreatedAtRoute("GetRide", new { id = result.Offer_Id }, result);*/
+        return Ok("OfferRide Sucessfully ");
     }
 
 

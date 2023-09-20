@@ -9,15 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{20
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIGateWay", "APIGateWay", "{1023A3B6-4235-464E-A9D5-498478CD53A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarPoolSystem.Web", "Frontend\CarPoolSystem.Web\CarPoolSystem.Web.csproj", "{B3E4C9B5-765E-4E0B-88CE-55FBDA2AB647}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarPoolSystem.Web", "Frontend\CarPoolSystem.Web\CarPoolSystem.Web.csproj", "{B3E4C9B5-765E-4E0B-88CE-55FBDA2AB647}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarPoolSystem.APIGateWay", "APIGateWay\CarPoolSystem.APIGateWay\CarPoolSystem.APIGateWay.csproj", "{CC98A5CA-B566-4A10-9B99-621CF339FC67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarPoolSystem.APIGateWay", "APIGateWay\CarPoolSystem.APIGateWay\CarPoolSystem.APIGateWay.csproj", "{CC98A5CA-B566-4A10-9B99-621CF339FC67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarPoolSystem.Services.Identity", "Services\CarPoolSystem.Services.Identity\CarPoolSystem.Services.Identity.csproj", "{C2FE6FE2-085E-462A-B034-D283EFC46EC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarPoolSystem.Services.Identity", "Services\CarPoolSystem.Services.Identity\CarPoolSystem.Services.Identity.csproj", "{C2FE6FE2-085E-462A-B034-D283EFC46EC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarPoolSystem.Services.BookingAPI", "Services\CarPoolSystem.Services.BookingAPI\CarPoolSystem.Services.BookingAPI.csproj", "{D8AA652F-B04F-49CA-9459-55FDD47AA8CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarPoolSystem.Services.BookingAPI", "Services\CarPoolSystem.Services.BookingAPI\CarPoolSystem.Services.BookingAPI.csproj", "{D8AA652F-B04F-49CA-9459-55FDD47AA8CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarPoolSystem.Services.OfferRideAPI", "Services\CarPoolSystem.Services.OfferRideAPI\CarPoolSystem.Services.OfferRideAPI.csproj", "{FD15CB51-2F2A-48C7-ABC7-20F0927AF043}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarPoolSystem.Services.OfferRideAPI", "Services\CarPoolSystem.Services.OfferRideAPI\CarPoolSystem.Services.OfferRideAPI.csproj", "{FD15CB51-2F2A-48C7-ABC7-20F0927AF043}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

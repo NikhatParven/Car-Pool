@@ -6,13 +6,12 @@ namespace CarPoolSystem.Services.OfferRideAPI.Model.OfferDTO
 {
     public class OfferDTO
     {
-
-
         public int Offer_Id { get; set; }
+       
         public string Name { get; set; }
         public string Source { get; set; }
         public string Destination { get; set; }
-        public string CarName { get; set; } // Car name from the Category table
+        public string Car_Name { get; set; } 
         public int Seat_Available { get; set; }
 
 
