@@ -1,4 +1,13 @@
+
+using CarPoolSystem.Services.BookingAPI.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<AppDbContext>(option =>
+{
+	option.UseSqlServer(builder.Configuration.GetConnectionString("AppConn"));
+});
 
 // Add services to the container.
 
