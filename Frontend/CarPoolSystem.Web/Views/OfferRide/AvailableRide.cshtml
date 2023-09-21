@@ -1,0 +1,52 @@
+﻿@model List<OfferRideModel>
+
+<h1>  Available Ride </h1>
+<table>
+    <thead>
+        <tr>
+            <h3>
+            <th> Rider Name</th>
+            <th> Source</th>
+            <th> Destination</th>
+            <th>Car Name</th>
+             <th>Seat Available</th>
+             <th>Phone No</th>
+              <th>Departure Time</th>
+              <th>Action</th>
+            </h3>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var value in Model)
+        {
+            <tr>
+                <td>
+                    @value.Name
+                </td>
+                <td>
+                    @value.Source
+                </td>
+                <td>
+                    @value.Destination
+                </td>
+                <td>
+                    @value.Car_Name
+                </td>
+                <td>
+                    @value.Seat_Available
+                </td>
+                <td>
+                    @value.Phone_no
+                </td>
+                <td>
+                    @value.DepartureTime
+                </td>
+                <td> <a href="#" class="btn btn-primary">Book Now</a> </td>
+            </tr>
+            
+        }
+
+        
+       
+    </tbody>
+</table>

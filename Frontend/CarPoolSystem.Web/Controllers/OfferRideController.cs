@@ -57,6 +57,24 @@ public class OfferRideController : Controller
         return View();
     }
 
-    
+    [HttpGet]
+
+    public async Task<IActionResult> AvailableRide()
+    {
+        string Apiurl = _configuration["ServiceUrls:OfferRideAPI"];
+        List<OfferRideModel> avilable = new();
+
+        var client = new HttpClient();
+        client.BaseAddress = new Uri(Apiurl);
+
+        var response = await client.GetAsync("api/OfferRide/All"); 
+        if(response!=null)
+        {
+            avilable = await response.Content.ReadFromJsonAsync<List<OfferRideModel>>();
+        }
+        return View(avilable);
+    }
+
+   
    
 }
