@@ -93,7 +93,7 @@ namespace CarPoolSystem.Web.Controllers
 						var principal = new ClaimsPrincipal(identity);
 
 						await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
-                        return RedirectToAction("GetUserList", "Identity");
+                        return RedirectToAction("AvailableRide", "OfferRide");
 /*                        Response.Redirect("https://localhost:7106/Identity/GetUserList");
 */
 						/* TempData["success"] = "LoggedIn Successfully";

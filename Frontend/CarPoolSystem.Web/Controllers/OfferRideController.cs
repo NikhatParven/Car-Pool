@@ -30,9 +30,9 @@ public class OfferRideController : Controller
                 var response = await client.PostAsJsonAsync("api/OfferRide/Offer", offerRideViewModel);
            
                 if (response.IsSuccessStatusCode)
-                {    
+                {
                     // Offer submission was successful. You can redirect or display a success message.
-                    return RedirectToAction("Index", "Home"); // Redirect to the "Index" action in the "Home" controller
+                    return RedirectToAction("AvailableRide", "OfferRide"); // Redirect to the "Available" action in the "OfferRide" controller
                 }
                 else if (response.StatusCode == HttpStatusCode.BadRequest)
                 {
@@ -56,7 +56,7 @@ public class OfferRideController : Controller
     {
         return View();
     }
-
+    
     [HttpGet]
 
     public async Task<IActionResult> AvailableRide()
