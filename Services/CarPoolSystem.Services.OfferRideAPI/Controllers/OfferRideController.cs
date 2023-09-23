@@ -57,4 +57,16 @@ public class OfferRideController:ControllerBase
      return Ok(allOfferRides); // Return all offer rides as a JSON response
     }
 
+    [HttpGet("{id}")]
+    
+    public async Task<object> GetRideById(int id)
+    {
+        var res = await _service.GetOfferRideById(id);
+        if (res != null)
+        {
+            return res;
+        }
+        return "User Not found";
+    }
+
 }

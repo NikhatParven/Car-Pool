@@ -4,22 +4,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CarPoolSystem.Services.BookingAPI.Models
 {
-	public class Booking
-	{
+    public class Booking
+    {
+        [Key]
+        public int BookingId { get; set; }
 
-		[Key]
-		public int BookingId { get; set; }
-		public int? UserId { get; set; }
-		[ForeignKey("UserId")]
-		public int? RideId { get; set; }
-		[ForeignKey("RideId")]
+        [ForeignKey("User")]
+        public int UserId { get; set; }
+        [ForeignKey("Ride")]
+        public int Offer_Id { get; set; }
 
-		[NotMapped]
-		public UserDto User { get; set; }
-
-		[NotMapped]
-		public RideDto Ride { get; set; }	
-
-
-	}
+    }
 }
