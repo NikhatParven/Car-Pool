@@ -1,6 +1,8 @@
 ﻿using CarPoolSystem.Services.OfferRideAPI.Data;
 using CarPoolSystem.Services.OfferRideAPI.Model;
 using CarPoolSystem.Services.OfferRideAPI.Model.OfferDTO;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CarPoolSystem.Services.OfferRideAPI.Services;
 
@@ -78,5 +80,24 @@ public class OfferRideService
         {
             return null;
         }
+    }
+
+    public async Task<OfferDTO> GetOfferRideById(int id)
+    {
+        Offer offer = await _dbContext.Offer.FirstOrDefaultAsync(u => u.Offer_Id == id);
+
+        var offerDtos = new OfferDTO
+        {
+            Offer_Id = id,
+            Name = offer.Name,
+            Source = offer.Source,
+            Destination = offer.Destination,
+            Car_Name = offer.Car_Name,
+            Seat_Available = offer.Seat_Available,
+            DepartureTime = offer.DepartureTime,
+            Phone_no = offer.Phone_no
+
+        };
+        return offerDtos;
     }
 }

@@ -1,8 +1,11 @@
-﻿namespace CarPoolSystem.Services.BookingAPI.Models.Dto
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CarPoolSystem.Services.BookingAPI.Models.Dto
 {
 	public class UserDto
 	{
-		public int UserId { get; set; }
+		[Key]
+		public int Id { get; set; }
 		public string FirstName { get; set; }
 		public string LastName { get; set; }
 		public string Location { get; set; }

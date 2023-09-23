@@ -131,5 +131,23 @@ namespace CarPoolSystem.Services.Identity.Controllers
             return Ok(userDtos);
         }
 
+        [HttpGet("getuserbyid/{id}")]
+        public async Task<IActionResult> GetUserById(int id)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
+
+            // Map User entities to UserDto
+            var userDtos = new UserDto
+            {
+                Id = user.Id,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Location = user.Location,
+                Email = user.Email
+            };
+
+            return Ok(userDtos);
+        }
+
     }
 }

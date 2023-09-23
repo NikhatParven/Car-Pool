@@ -4,7 +4,8 @@ namespace CarPoolSystem.Services.BookingAPI.Models.Dto
 {
 	public class RideDto
 	{
-		public int Ride_Id { get; set; }
+		[Key]
+		public int Offer_Id { get; set; }
 
 		public string Name { get; set; }
 		public string Source { get; set; }

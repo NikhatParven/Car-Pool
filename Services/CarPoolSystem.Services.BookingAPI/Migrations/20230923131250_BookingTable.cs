@@ -16,8 +16,8 @@ namespace CarPoolSystem.Services.BookingAPI.Migrations
                 {
                     BookingId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<int>(type: "int", nullable: true),
-                    RideId = table.Column<int>(type: "int", nullable: true)
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    Offer_Id = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
