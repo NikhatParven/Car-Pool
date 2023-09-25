@@ -157,7 +157,7 @@ input:focus {
 
 
 
-.CreateOffer {
+/*.CreateOffer {
     background-image: url('https://img.freepik.com/free-vector/car-rental-concept-illustration_114360-9297.jpg?w=996&t=st=1695371860~exp=1695372460~hmac=ae75c045bb587b9dbdc6e5a46e8954f6eeb51ba3f0de4d1b7178829d92530989');
     background-size: cover;
     background-repeat: no-repeat;
@@ -167,7 +167,7 @@ input:focus {
    
     
    
-}
+}*/
 
 /* Container for the background image */
 /*.background-container {
@@ -181,25 +181,25 @@ input:focus {
 }*/
 
 /* Container for the form */
-.form-container {
-    max-width: 400px; /* Adjust the width as needed */
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent white background */
-    border-radius: 10px; /* Rounded corners */
-    text-align: right;
+/*.form-container {
+    max-width: 400px;*/ /* Adjust the width as needed */
+    /*padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);*/ /* Semi-transparent white background */
+    /*border-radius: 10px;*/ /* Rounded corners */
+    /*text-align: right;
     margin-right: 25px;
     margin-left: auto;
-}
+}*/
 
 /* Style for form labels */
-label {
+/*label {
     display: block;
     text-align: right;
     margin-top: 10px;
-}
+}*/
 
 /* Style for form inputs */
-input[type="text"],
+/*input[type="text"],
 input[type="number"],
 input[type="tel"] {
     width: 100%;
@@ -207,20 +207,20 @@ input[type="tel"] {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-}
+}*/
 
 /* Style for the submit button */
-input[type="submit"] {
-    background-color: orange; /* Change to your desired color */
-    color: #fff; /* Text color (white in this case) */
-    padding: 10px 20px;
+/*input[type="submit"] {
+    background-color: orange;*/ /* Change to your desired color */
+    /*color: #fff;*/ /* Text color (white in this case) */
+    /*padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 .form-title {
-    text-align: center; /* Center-align the title */
-    margin-top: 10px;
-    margin-bottom:10px;/* Add some spacing below the title */
-}
+    text-align: center;*/ /* Center-align the title */
+    /*margin-top: 10px;
+    margin-bottom:10px;*//* Add some spacing below the title */
+/*}*/
 
