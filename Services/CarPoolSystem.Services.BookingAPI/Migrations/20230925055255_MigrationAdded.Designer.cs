@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CarPoolSystem.Services.BookingAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230923131250_BookingTable")]
-    partial class BookingTable
+    [Migration("20230925055255_MigrationAdded")]
+    partial class MigrationAdded
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
