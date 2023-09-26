@@ -5,7 +5,7 @@
 namespace CarPoolSystem.Services.BookingAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class BookingTable : Migration
+    public partial class MigrationAdded : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

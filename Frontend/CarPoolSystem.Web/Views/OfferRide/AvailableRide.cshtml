@@ -1,50 +1,65 @@
 ﻿@model List<OfferRideModel>
-<div class="Ride">
-<h1>  Available Rides </h1>
-<table>
-    <thead>
-        <tr>
-            <h3>
-            <th> Rider Name</th>
-            <th> Source</th>
-            <th> Destination</th>
-            <th>Car Name</th>
-             <th>Seat Available</th>
-             <th>Phone No</th>
-              <th>Departure Time</th>
-              <th>Action</th>
-            </h3>
-        </tr>
-    </thead>
-    <tbody>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Available Page Title</title>
+    <style>
+        /* Define your internal CSS styles here */
+        .card {
+            /*Related to border*/
+            border: 2px dotted #ccc;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .card {
+            background-image: url('https://img.freepik.com/free-vector/taxi-app-interface-concept_23-2148494543.jpg?size=626&ext=jpg&uid=R112230945&ga=GA1.2.1878736734.1694682702&semt=sph');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .card {
+            background-color: rgba(0, 0, 0, 0.3);
+            align-items: center;
+            border: 3px dotted #ccc; /* Adjust border width and color as needed */
+            border-radius: 10px; /* Rounded corners for the card */
+            padding: 7px;
+        }
+
+            .card:hover {
+                background: #FFC311;
+                color: #fff;
+            }
+
+            .card-body .h2 {
+                text-align: center;
+            }
+
+        /* Additional styles can be defined here */
+    </style>
+</head>
+<body>
+<div class="container mt-3">
+    <div class="row">
         @foreach(var value in Model)
         {
-            <tr>
-                <td>
-                    @value.Name
-                </td>
-                <td>
-                    @value.Source
-                </td>
-                <td>
-                    @value.Destination
-                </td>
-                <td>
-                    @value.Car_Name
-                </td>
-                <td>
-                    @value.Seat_Available
-                </td>
-                <td>
-                    @value.Phone_no
-                </td>
-                <td>
-                    @value.DepartureTime
-                </td>
-                <td> <a href="#" class="btn btn-primary">Book Now</a> </td>
-            </tr>
-            
+            <div class="col-md-3 mb-3">
+                 <div class="card">
+                    <div class="card-body">
+                        <h2>Available</h2>
+                        <p class="card-text"><strong>Rider Name:</strong> @value.Name</p>
+                        <p class="card-text"><strong>Source:</strong> @value.Source</p>
+                        <p class="card-text"><strong>Destination:</strong> @value.Destination</p>
+                        <p class="card-text"><strong>Car Name:</strong> @value.Car_Name</p>
+                        <p class="card-text"><strong>Seat Available:</strong> @value.Seat_Available</p>
+                        <p class="card-text"><strong>Phone No:</strong> @value.Phone_no</p>
+                        <p class="card-text"><strong>Departure Time:</strong> @value.DepartureTime</p>
+                        <a href="#" class="btn btn-primary">Book Now</a>
+                     </div> 
+                </div>
+            </div>
         }
-    </tbody>
-</table>
+    </div>
 </div>
+</body>
+</html>
