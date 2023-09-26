@@ -12,7 +12,7 @@ namespace CarPoolSystem.Services.BookingAPI.Models.Dto
 		public string Destination { get; set; }
 		public string Car_Name { get; set; }
 
-		public int No_of_Seat { get; set; }
+		public int Seat_Available { get; set; }
 
 		// Modify DepartureTime property to return a formatted string
 		[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd HH:mm}")]
