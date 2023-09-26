@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
@@ -77,27 +78,29 @@ namespace CarPoolSystem.Web.Controllers
                     // Send the login data to your Identity API
                     var response = await client.PostAsJsonAsync("api/user/login", loginDto);
 
+                    
+
+
                     if (response.IsSuccessStatusCode)
                     {
                         // Login was successful. You can redirect or perform other actions.
                         // For example, you can store a token in a cookie or session for authentication.
 
 
-
+                        var userId = "";
 
                         var claims = new List<Claim>()
                         {
                             new Claim (ClaimTypes.Email , ClaimTypes.Name),
+                             new Claim(ClaimTypes.NameIdentifier, userId)
                         };
 						var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 						var principal = new ClaimsPrincipal(identity);
 
 						await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
                         return RedirectToAction("AvailableRide", "OfferRide");
-/*                        Response.Redirect("https://localhost:7106/Identity/GetUserList");
-*/
-						/* TempData["success"] = "LoggedIn Successfully";
-						 Response.Redirect("https://localhost:7106/Identity/GetUserList"); */// Redirect to the home page after successful login
+
+						// Redirect to the home page after successful login
 
 					}
                     else

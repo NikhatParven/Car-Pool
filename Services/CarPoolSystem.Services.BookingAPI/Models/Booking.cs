@@ -9,9 +9,9 @@ namespace CarPoolSystem.Services.BookingAPI.Models
         [Key]
         public int BookingId { get; set; }
 
-        [ForeignKey("User")]
+        [ForeignKey("UserId")]
         public int UserId { get; set; }
-        [ForeignKey("Ride")]
+        [ForeignKey("OFfer_Id")]
         public int Offer_Id { get; set; }
 
     }

@@ -1,4 +1,5 @@
 ﻿using CarPoolSystem.Web.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Net;
@@ -15,6 +16,8 @@ public class OfferRideController : Controller
         _configuration = configuration;
         _httpClientFactory = httpClientFactory;
     }
+
+    [Authorize]
 
     [HttpPost]
     public async Task<IActionResult> CreateOfferRide(OfferRideModel offerRideViewModel)
@@ -56,6 +59,8 @@ public class OfferRideController : Controller
     {
         return View();
     }
+
+    [Authorize]
     
     [HttpGet]
 
@@ -75,6 +80,18 @@ public class OfferRideController : Controller
         return View(avilable);
     }
 
-   
-   
+    [HttpPost]
+    public ActionResult BookRide(OfferRideModel ride)
+    {
+        // Process the booking using the provided model
+
+        // For example, you can access properties of the ride like this:
+        var name = ride.Name;
+        var source = ride.Source;
+        // ... (and so on for other properties)
+
+        return RedirectToAction("Index"); // Redirect to the main page or any other appropriate action
+    }
+
+
 }
