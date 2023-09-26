@@ -24,7 +24,7 @@ namespace CarPoolSystem.Services.BookingAPI.Services
                 {
                     client.BaseAddress = new Uri(identityApiUrl);
 
-                    response = await client.GetAsync($"/api/OfferRide/{id}");
+                    response = await client.GetAsync($"/api/OfferRide/GetRideById/{id}");
 
                     response.EnsureSuccessStatusCode(); // Throws an exception if not a success status code
 
