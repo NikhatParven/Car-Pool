@@ -5,6 +5,8 @@ namespace CarPoolSystem.Web.Models
 {
     public class OfferRideModel
     {
+
+        public int Offer_Id { get; set; }
         public string Name { get; set; }
         public string Source { get; set; }
         public string Destination { get; set;}
