@@ -10,7 +10,7 @@ public class OfferRideController : Controller
 {
     private readonly IConfiguration _configuration;
     private readonly IHttpClientFactory _httpClientFactory;
-   
+
     public OfferRideController(IConfiguration configuration, IHttpClientFactory httpClientFactory)
     {
         _configuration = configuration;
@@ -31,7 +31,7 @@ public class OfferRideController : Controller
                 client.BaseAddress = new Uri(offerRideApiUrl);
                 // Send the offer data to your OfferRide API
                 var response = await client.PostAsJsonAsync("api/OfferRide/Offer", offerRideViewModel);
-           
+
                 if (response.IsSuccessStatusCode)
                 {
                     // Offer submission was successful. You can redirect or display a success message.
@@ -41,8 +41,8 @@ public class OfferRideController : Controller
                 {
                     // Handle validation errors if available in the response content.
                     var content = await response.Content.ReadAsStringAsync();
-                // You can log or display the content to diagnose the issue.
-                  ModelState.AddModelError(string.Empty, "Offer submission failed due to validation errors.");
+                    // You can log or display the content to diagnose the issue.
+                    ModelState.AddModelError(string.Empty, "Offer submission failed due to validation errors.");
                 }
                 else
                 {
@@ -61,7 +61,7 @@ public class OfferRideController : Controller
     }
 
     [Authorize]
-    
+
     [HttpGet]
 
     public async Task<IActionResult> AvailableRide()
@@ -72,16 +72,23 @@ public class OfferRideController : Controller
         var client = new HttpClient();
         client.BaseAddress = new Uri(Apiurl);
 
-        var response = await client.GetAsync("api/OfferRide/All"); 
-        if(response!=null)
+        var response = await client.GetAsync("api/OfferRide/All");
+        if (response != null)
         {
             avilable = await response.Content.ReadFromJsonAsync<List<OfferRideModel>>();
         }
         return View(avilable);
     }
 
-    [HttpPost]
-    public ActionResult BookRide(OfferRideModel ride)
+    public async Task<ActionResult> BookRide()
+    {
+        return View();
+    }
+
+}
+    // No Meaning here
+    /*[HttpPost]*/
+   /* public ActionResult BookRide(OfferRideModel ride)
     {
         // Process the booking using the provided model
 
@@ -91,7 +98,7 @@ public class OfferRideController : Controller
         // ... (and so on for other properties)
 
         return RedirectToAction("Index"); // Redirect to the main page or any other appropriate action
-    }
+    }*/
 
 
-}
+
