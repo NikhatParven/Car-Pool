@@ -5,6 +5,8 @@
 <head>
     <title> Available Page Title</title>
     <style>
+
+       
         /* Define your internal CSS styles here */
         .card {
             /*Related to border*/
@@ -51,6 +53,24 @@
             color: black
         } 
 
+        .green-button {
+            background-color: #28a745; /* Use the specific color code for green */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+            .green-button:hover {
+                background-color: #218838; /* Change the hover color if desired */
+            }
+
+
+
         /* Additional styles can be defined here */
     </style>
 </head>
@@ -70,7 +90,9 @@
                         <p class="card-text"><strong>Seat Available:</strong> @value.Seat_Available</p>
                         <p class="card-text"><strong>Phone No:</strong> @value.Phone_no</p>
                         <p class="card-text"><strong>Departure Time:</strong> @value.DepartureTime</p>
+
                         <a href="https://localhost:7046/Book/BookRide" class="btn btn-primary">Book Now</a>
+
                      </div> 
                 </div>
             </div>
